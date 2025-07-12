@@ -1,0 +1,33 @@
+{
+	"id": "024c1c78-e494-46c2-bd87-bd543503076a",
+	"name": "trailsToTales",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:5000",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "adminToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZjOTI4MTRhNTM5MDE2MWJiY2MwNWMiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIm5hbWUiOiJhZG1pbiIsInVzZXJUeXBlIjoxLCJpYXQiOjE3NDQ5OTc5ODAsImV4cCI6MTc0NTA4NDM4MH0.nbIHWhmoENfOYJWyzi2h82ZiUzOzfbueQkGWJY1Jr_Y",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "userToken",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "guideToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODA1NGY3ZjRiY2NhYzIwNjFjNDI5NjIiLCJlbWFpbCI6Imd1aWRlQGdtYWlsLmNvbSIsIm5hbWUiOiJHdWlkZSIsInVzZXJUeXBlIjozLCJpYXQiOjE3NDYxMTI2NjYsImV4cCI6MTc0NjE5OTA2Nn0.R7acja-bE22fRXDa7NfIzeptp3nWsPj5JCuKeknMJF0",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-05-10T11:16:46.264Z",
+	"_postman_exported_using": "Postman/11.44.4"
+}

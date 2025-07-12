@@ -1,0 +1,47 @@
+.about-container {
+  background-color: #fdfdfd;
+  color: #003366;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: 600;
+}
+
+
+
+.about-img{
+    height: 550px;
+    width: 1200px;
+}
+
+
+.feature-section {
+  margin-top: 50px;
+}
+
+.feature-card {
+  border: none;
+  background: linear-gradient(135deg, #e3edfa, #f8f8f8);
+
+  color: #003366;
+  border-radius: 18px;
+  padding: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 180px;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}

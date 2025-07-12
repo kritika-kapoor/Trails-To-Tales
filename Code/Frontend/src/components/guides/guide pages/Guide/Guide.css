@@ -1,0 +1,109 @@
+.guide-wrapper {
+  /* background: linear-gradient(to right, #5f4dee, #8e63f1); */
+  background: linear-gradient(to right, #0287ac, #0072ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.guide-card-container {
+  background-color: white;
+  border-radius: 25px;
+  max-width: 1000px;
+  width: 100%;
+  padding: 3rem 2rem;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.guide-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.guide-subtitle {
+  font-size: 1.1rem;
+  color: #6e6e6e;
+}
+
+.d-flex.flex-column.flex-md-row.gap-4 {
+  margin-top: 2.5rem;
+}
+
+.guide-feature-card {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+  padding-inline: 1.5rem;
+  color: white;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(to right, #016986, #0072ff);
+
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  /* existing styles... */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px; /* or whatever works best */
+
+}
+
+.guide-feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  background: url('data:image/svg+xml;utf8,<svg width="100%" height="100" viewBox="0 0 500 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.00,49.98 C150.00,150.00 349.28,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="fill:white;"></path></svg>') no-repeat top center;
+  background-size: cover;
+}
+
+.guide-feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.guide-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  z-index: 1;
+  position: relative;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.service-btn, .ad-btn {
+  background-color: #ffffff;
+  color: #0064de;
+  border: none;
+  font-weight: 600;
+  z-index: 1;
+  position: relative;
+}
+
+.service-btn:hover, .ad-btn:hover {
+  background-color: #e6e6ff;
+  color: #0064de;
+}

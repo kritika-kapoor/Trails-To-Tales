@@ -1,0 +1,84 @@
+/* Registeruser.css */
+
+/* Full page background */
+.register-wrapper {
+  background: linear-gradient(to right, #0287ac, #0072ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Container styling */
+.main-contanier {
+  background-color: rgba(255, 255, 255, 0.823);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 850px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form label styling */
+.form-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Input and textarea */
+.form-control {
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  /* border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); */
+  border-color: #00c6ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 198, 255, 0.25);
+}
+
+/* Upload preview container */
+/* #profileImageInput + div {
+  background-color: #fcfcfcb6;
+  border: 2px dashed #999;
+  transition: all 0.3s ease;
+}
+
+#profileImageInput + div:hover {
+  background-color: #fff4e6;
+  border-color: #666;
+} */
+
+/* Register button */
+button[type="submit"] {
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #00c6ff;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+  /* transition: background-color 0.3s ease; */
+}
+
+button[type="submit"]:hover {
+  /* background-color: #0056b3; */
+  background-color: #0072ff;
+}
+
+/* Login text */
+.text-center span {
+  font-weight: 500;
+}
+
+.register-heading{
+    color: #0365dc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .main-contanier {
+    padding: 30px 20px;
+  }
+}

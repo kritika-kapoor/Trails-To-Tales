@@ -1,0 +1,2036 @@
+{
+	"info": {
+		"_postman_id": "eba0093b-c2e9-493a-ad6e-572595f7fedd",
+		"name": "trailsToTales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42965237"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "priya@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/changePassword",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_id",
+									"value": "67ed7fae36d1d79acc74560c",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "Jalandhar",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "userImage",
+									"type": "file",
+									"src": "/C:/Users/DELL/Desktop/pragati.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/user/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "limit",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/all/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "67ed7ecf36d1d79acc745604",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/single/user/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"single",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Divya",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "divya@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "1928391931",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Pune",
+									"type": "text"
+								},
+								{
+									"key": "userImage",
+									"type": "file",
+									"src": "/C:/Users/DELL/Desktop/goa1.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/user/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "67ed7fae36d1d79acc745609",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/user/changeStatus",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"changeStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Guides",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Guide 4",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "guide4@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "guide",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "9999999999",
+									"type": "text"
+								},
+								{
+									"key": "amountPerDay",
+									"value": "1200",
+									"type": "text"
+								},
+								{
+									"key": "package",
+									"value": "4500",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/guide/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"guide",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/all/guides",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"guides"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "68054f0c4bccac2061c4295c",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/single/guide",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"single",
+								"guide"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "680e817071c61dc05ade30e4",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "amountPerDay",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "package",
+									"value": "1300",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/guide/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"guide",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "68054f0c4bccac2061c42959",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/guide/changeStatus",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"guide",
+								"changeStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Destinations",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "destinationName",
+									"value": "Maldieves",
+									"type": "text"
+								},
+								{
+									"key": "destinationImage",
+									"type": "file",
+									"src": [
+										"/C:/Users/DELL/Desktop/md1.jpeg",
+										"/C:/Users/DELL/Desktop/md2.jpeg"
+									]
+								},
+								{
+									"key": "destinationImage",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/add/destination",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"add",
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/all/destination",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "680e5ec4569ed7cc32c55249",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/single/destination",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"single",
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_id",
+									"value": "681c2a9f35f3a9af53895a7c",
+									"type": "text"
+								},
+								{
+									"key": "destinationName",
+									"value": "Maldives",
+									"type": "text"
+								},
+								{
+									"key": "destinationImage",
+									"type": "file",
+									"src": [
+										"/C:/Users/DELL/Desktop/md1.jpeg",
+										"/C:/Users/DELL/Desktop/md2.jpeg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/update/destination",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"update",
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "680e5ec4569ed7cc32c55249",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/changeStatus/destination",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"changeStatus",
+								"destination"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Journals",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "journalTitle",
+									"value": "My Journal number 1",
+									"type": "text"
+								},
+								{
+									"key": "journalDescription",
+									"value": "This is my journal",
+									"type": "text"
+								},
+								{
+									"key": "destinationId",
+									"value": "680e5efb569ed7cc32c5524d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/add/journal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"add",
+								"journal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/all/journal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"journal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "6813c46ed50268535e6f655e",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/single/journal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"single",
+								"journal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "680e7838da63d3e2e24fead2",
+									"type": "text"
+								},
+								{
+									"key": "journalTitle",
+									"value": "My Journal updated",
+									"type": "text"
+								},
+								{
+									"key": "journalDescription",
+									"value": "Updated Description 2",
+									"type": "text"
+								},
+								{
+									"key": "destinationId",
+									"value": "680e5efb569ed7cc32c5524d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/update/journal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"journal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "680e7838da63d3e2e24fead2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/changeStatus/journal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"changeStatus",
+								"journal"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/all/booking",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "68189c38199d446baad6ad51",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/single/booking",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"single",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "681aec281db1af71a4312d76",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/changeStatus/booking",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"changeStatus",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "guideId",
+									"value": "68138fb4af10ae1a1e928da5",
+									"type": "text"
+								},
+								{
+									"key": "destinationId",
+									"value": "68138a2d20d7fe7152f32995",
+									"type": "text"
+								},
+								{
+									"key": "dateOfBooking",
+									"value": "09/12/2026",
+									"type": "text"
+								},
+								{
+									"key": "numberOfDays",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/add/booking",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"add",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "68189c38199d446baad6ad51",
+									"type": "text"
+								},
+								{
+									"key": "numberOfDays",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "dateOfBooking",
+									"value": "18/05/2025",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/update/booking",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Advertisements",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/all/ads",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/single/ads",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"single",
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "681393494df168a539354881",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/changeStatus/ads",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"changeStatus",
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{guideToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "duration",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is my fifth ad",
+									"type": "text"
+								},
+								{
+									"key": "adsImage",
+									"type": "file",
+									"src": "/C:/Users/DELL/Desktop/adImage1.jpeg"
+								},
+								{
+									"key": "adsName",
+									"value": "fifth ad ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/guide/add/advertisement",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"guide",
+								"add",
+								"advertisement"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gallery",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/all/gallery",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"gallery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/single/gallery",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"single",
+								"gallery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "681c2f0be589d4b5590b1cb4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/changeStatus/gallery",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"changeStatus",
+								"gallery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "albumName",
+									"value": "New album",
+									"type": "text"
+								},
+								{
+									"key": "destinationId",
+									"value": "680e5ec4569ed7cc32c55249",
+									"type": "text"
+								},
+								{
+									"key": "isPublic",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "galleryImages",
+									"type": "file",
+									"src": [
+										"/C:/Users/DELL/Documents/GitHub/6M_2025_MERN_TRAINING/Bootstrap/task day-21 (business casual)/task-day-21-images/bg.jpg",
+										"/C:/Users/DELL/Documents/GitHub/6M_2025_MERN_TRAINING/Bootstrap/task day-21 (business casual)/task-day-21-images/intro-pic.jpg",
+										"/C:/Users/DELL/Documents/GitHub/6M_2025_MERN_TRAINING/Bootstrap/task day-21 (business casual)/task-day-21-images/slide-1.jpg",
+										"/C:/Users/DELL/Documents/GitHub/6M_2025_MERN_TRAINING/Bootstrap/task day-21 (business casual)/task-day-21-images/slide-2.jpg",
+										"/C:/Users/DELL/Documents/GitHub/6M_2025_MERN_TRAINING/Bootstrap/task day-21 (business casual)/task-day-21-images/slide-3.jpg"
+									]
+								},
+								{
+									"key": "galleryImages",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/add/gallery",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"add",
+								"gallery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_id",
+									"value": "681c2f0be589d4b5590b1cb4",
+									"type": "text"
+								},
+								{
+									"key": "albumName",
+									"value": "Maldives",
+									"type": "text"
+								},
+								{
+									"key": "destinationId",
+									"value": "680e5efb569ed7cc32c5524d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "isPublic",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "galleryImages",
+									"type": "file",
+									"src": [
+										"/C:/Users/DELL/Desktop/md1.jpeg",
+										"/C:/Users/DELL/Desktop/md2.jpeg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/update/gallery",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"gallery"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "dashboard",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/dashboard",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "{{guideToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "reportedAccountId",
+									"value": "67ed7fae36d1d79acc74560c",
+									"type": "text"
+								},
+								{
+									"key": "issue",
+									"value": "Spamcontent",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/add/report",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"add",
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "limit",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/all/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"all",
+								"reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "{{guideToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "68144641dc07408390f5fa1f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/single/report",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"single",
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "68144641dc07408390f5fa1f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/changeStatus/report",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"changeStatus",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "toDo lists",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Things to keep",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Things to keep for the trip",
+									"type": "text"
+								},
+								{
+									"key": "tasks",
+									"value": "Wallet",
+									"type": "text"
+								},
+								{
+									"key": "tasks",
+									"value": "Charger",
+									"type": "text"
+								},
+								{
+									"key": "tasks",
+									"value": "Medicines",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/add/toDo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"add",
+								"toDo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/all/toDo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"all",
+								"toDo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "68151549ea9a00710b04ebe7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/single/toDo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"single",
+								"toDo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "68151549ea9a00710b04ebe7",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Shopping List",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Desc updated",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tasks",
+									"value": "Food",
+									"type": "text"
+								},
+								{
+									"key": "tasks",
+									"value": "Clothes",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/update/toDo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"toDo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "68151549ea9a00710b04ebe7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/changeStatus/toDo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"changeStatus",
+								"toDo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ratings",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "guideId",
+									"value": "68054f7f4bccac2061c42965",
+									"type": "text"
+								},
+								{
+									"key": "addedRating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "review",
+									"value": "Good",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/add/ratings",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"add",
+								"ratings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,489 @@
+/* General layout and typography */
+.profile-page {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #016986, #0072ff);
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: whitesmoke;
+}
+
+.page-header p {
+  color: whitesmoke;
+  font-size: 1.1rem;
+}
+
+/* Profile Section */
+.profile-section {
+  margin-bottom: 2rem;
+}
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 91, 187, 0.1);
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  border-left: 6px solid #00c6ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-3px);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #007bff;
+  margin-bottom: 1rem;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #0056b3;
+}
+
+.profile-details .detail-group {
+  margin-bottom: 1.2rem;
+}
+
+.detail-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #444;
+}
+
+.detail-value {
+  background: #f1f9ff;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.profile-actions {
+  text-align: right;
+  margin-top: 1.5rem;
+}
+
+.edit-btn,
+.save-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+  background: #0056b3;
+}
+
+/* Full Width Card */
+.full-width-card {
+  margin-bottom: 2rem;
+}
+
+.full-width-card .info-card {
+  width: 100%;
+  max-width: none;
+}
+
+/* Card Tabs */
+.card-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Blogs Styling */
+.blogs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blog-item {
+  background: #f0f8ff;
+  padding: 16px;
+  border-radius: 10px;
+  border-left: 4px solid #007bff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.blog-item:hover {
+  background: #d8e8ff;
+  transform: translateX(5px);
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.blog-title {
+  font-weight: 600;
+  color: #0056b3;
+  font-size: 1.1em;
+}
+
+.blog-date {
+  color: #777;
+  font-size: 0.9em;
+}
+
+.blog-preview {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.blog-images {
+  display: flex;
+  gap: 8px;
+}
+
+.blog-thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Gallery Styling */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  background: #f0f8ff;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 4px solid #007bff;
+}
+
+.gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-destination {
+  padding: 10px;
+  font-weight: 600;
+  color: #0056b3;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.gallery-preview {
+  position: relative;
+}
+
+.gallery-thumbnail {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.image-count {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+/* Bottom Cards */
+.bottom-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Guide Styling */
+.guide-item {
+  background: #f0f8ff;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border-left: 4px solid #007bff;
+}
+
+.guide-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.guide-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid #007bff;
+}
+
+.guide-name {
+  font-weight: 600;
+  color: #0056b3;
+}
+
+.guide-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9em;
+}
+
+.guide-location,
+.guide-contact,
+.guide-rate {
+  color: #555;
+}
+
+/* Followers Styling */
+.followers-card {
+  text-align: center;
+}
+
+.followers-count {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #007bff;
+  margin: 20px 0;
+}
+
+.followers-label {
+  color: #555;
+  font-size: 1.1em;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.modal-content h2 {
+  color: #0056b3;
+  margin-bottom: 0.5rem;
+}
+
+.modal-subtitle {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 0.95em;
+}
+
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.modal-text {
+  line-height: 1.6;
+  color: #333;
+}
+
+.gallery-modal-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.gallery-modal-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Add these styles to your existing CSS */
+
+/* Tab Content */
+.tab-content {
+  padding: 15px 0;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.gallery-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-destination {
+  padding: 12px;
+  font-weight: 600;
+  color: #0056b3;
+  background: #e9f5ff;
+}
+
+.gallery-preview {
+  position: relative;
+  height: 160px;
+}
+
+.gallery-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-count {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Modal Gallery Images */
+.gallery-modal-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-modal-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-modal-image:hover {
+  transform: scale(1.03);
+}
